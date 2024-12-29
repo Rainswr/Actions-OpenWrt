@@ -17,3 +17,4 @@
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+sed -i '/^#src-git luci https:\/\/github.com\/coolsnowwolf\/luci$/s/^#//' feeds.conf.default && sed -i '/^src-git luci https:\/\/github.com\/coolsnowwolf\/luci\.git;openwrt-23\.05$/s/^/#/' feeds.conf.default
